@@ -1,5 +1,5 @@
 {% set name = "mednet" %}
-{% set version = "1.0.2" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mednet-{{ version }}.tar.gz
-  sha256: b6e48a023f4e698c264be517b80227c1ec21ddf07889c130ffb46ee0cd028bff
+  sha256: f281679e8336c784b41315357821bbd0d28ce77fb44a3160e84da4668e6c8ee6
 
 build:
   number: 0
