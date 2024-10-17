@@ -7,7 +7,7 @@ Home: https://gitlab.idiap.ch/biosignal/software/mednet
 
 Package license: GPL-3.0-or-later
 
-Summary: Computer-Aided Detection and Segmentation from Medical Data
+Summary: Multi-task Library to Develop Computer-Aided Tools for Medical Data Analysis
 
 Development: https://gitlab.idiap.ch/biosignal/software/mednet
 
