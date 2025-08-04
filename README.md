@@ -11,7 +11,7 @@ Summary: Multi-task Library to Develop Computer-Aided Tools for Medical Data Ana
 
 Development: https://gitlab.idiap.ch/biosignal/software/mednet
 
-Documentation: https://mednet.readthedocs.io
+Documentation: https://mednet.readthedocs.io/
 
 Current build status
 ====================
