@@ -1,6 +1,6 @@
 context:
   name: mednet
-  version: "2.0.0"
+  version: 2.0.0
   python_min: 3.11
 
 package:
@@ -34,10 +34,12 @@ requirements:
     - credible >=1.0.2
     - grad-cam >=1.5.0
     - lightning >=2.2.0
+    - loky
     - h5py
     - matplotlib-base
     - mlflow-skinny
     - numpy
+    - peft
     - pillow
     - psutil
     - python-gitlab
@@ -46,6 +48,7 @@ requirements:
     - scipy
     - tabulate
     - tensorboard
+    - timm
     - torchvision >=0.18.0
     - pytorch
     - torchio
