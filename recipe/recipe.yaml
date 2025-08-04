@@ -71,7 +71,7 @@ tests:
         - pytest
     script:
       - mednet --help
-      - pytest -sv tests/test_cli.py
+      - pytest -sv tests/cli/test_cli.py
 
 about:
   summary: Multi-task Library to Develop Computer-Aided Tools for Medical Data Analysis
