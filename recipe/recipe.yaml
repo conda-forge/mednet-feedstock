@@ -1,6 +1,6 @@
 context:
   name: mednet
-  version: 1.3.1
+  version: 2.0.0
   python_min: 3.11
 
 package:
@@ -8,8 +8,8 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/mednet-${{ version }}.tar.gz
-  sha256: fe1c93f6b725889eb9225f92e32088ba76957f392a56565fa28ae4ed341b5b00
+  url: https://files.pythonhosted.org/packages/ec/1a/c77865bc2b5e2ad9d32b11ebad43b81d7bf1280a8da3ed264dad68572779/mednet-${{ version }}.tar.gz
+  sha256: 09b2d5553e95068808579ca81f96c514e37124c07be58c508c5f4947178e5703
 
 build:
   number: 1
@@ -34,10 +34,12 @@ requirements:
     - credible >=1.0.2
     - grad-cam >=1.5.0
     - lightning >=2.2.0
+    - loky
     - h5py
     - matplotlib-base
     - mlflow-skinny
     - numpy
+    - peft
     - pillow
     - psutil
     - python-gitlab
@@ -46,6 +48,7 @@ requirements:
     - scipy
     - tabulate
     - tensorboard
+    - timm
     - torchvision >=0.18.0
     - pytorch
     - torchio
@@ -68,7 +71,7 @@ tests:
         - pytest
     script:
       - mednet --help
-      - pytest -sv tests/test_cli.py
+      - pytest --override-ini pythonpath=tests/src -sv tests/cli/test_cli.py
 
 about:
   summary: Multi-task Library to Develop Computer-Aided Tools for Medical Data Analysis
