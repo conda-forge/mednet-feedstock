@@ -1,0 +1,86 @@
+schema_version: 1
+
+context:
+  name: mednet
+  version: 1.3.1
+  python_min: 3.11
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/mednet-${{ version }}.tar.gz
+  sha256: fe1c93f6b725889eb9225f92e32088ba76957f392a56565fa28ae4ed341b5b00
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - mednet = mednet.scripts.cli:cli
+
+requirements:
+  host:
+    - python 3.11.*
+    - hatchling
+    - versioningit
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - clapper >=1.3.1
+    - click
+    - colorlog
+    - compact-json
+    - credible >=1.0.2
+    - grad-cam >=1.5.0
+    - lightning >=2.2.0
+    - h5py
+    - matplotlib-base
+    - mlflow-skinny
+    - numpy
+    - pillow
+    - psutil
+    - python-gitlab
+    - scikit-image
+    - scikit-learn
+    - scipy
+    - tabulate
+    - tensorboard
+    - torchvision >=0.18.0
+    - pytorch
+    - torchio
+    - torchmetrics
+    - tqdm
+    - versioningit
+
+tests:
+  - python:
+      imports:
+        - mednet
+      pip_check: true
+      python_version: ${{ python_min }}.*
+  - files:
+      source:
+        - tests
+    requirements:
+      run:
+        - pip
+        - pytest
+        - python ${{ python_min }}.*
+    script:
+      - mednet --help
+      - pytest -sv tests/test_cli.py
+
+about:
+  summary: Multi-task Library to Develop Computer-Aided Tools for Medical Data Analysis
+  license: GPL-3.0-or-later
+  license_file: LICENSES/GPL-3.0-or-later.txt
+  homepage: https://gitlab.idiap.ch/biosignal/software/mednet
+  repository: https://gitlab.idiap.ch/biosignal/software/mednet
+  documentation: https://mednet.readthedocs.io
+
+extra:
+  recipe-maintainers:
+    - anjos
