@@ -12,7 +12,7 @@ source:
   sha256: 09b2d5553e95068808579ca81f96c514e37124c07be58c508c5f4947178e5703
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
@@ -77,8 +77,8 @@ about:
   summary: Multi-task Library to Develop Computer-Aided Tools for Medical Data Analysis
   license: GPL-3.0-or-later
   license_file: LICENSES/GPL-3.0-or-later.txt
-  homepage: https://gitlab.idiap.ch/biosignal/software/mednet
-  repository: https://gitlab.idiap.ch/biosignal/software/mednet
+  homepage: https://gitlab.idiap.ch/medai/software/mednet
+  repository: https://gitlab.idiap.ch/medai/software/mednet
   documentation: https://mednet.readthedocs.io
 
 extra:
