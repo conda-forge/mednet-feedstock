@@ -3,13 +3,13 @@ About mednet-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mednet-feedstock/blob/main/LICENSE.txt)
 
-Home: https://gitlab.idiap.ch/biosignal/software/mednet
+Home: https://gitlab.idiap.ch/medai/software/mednet
 
 Package license: GPL-3.0-or-later
 
 Summary: Multi-task Library to Develop Computer-Aided Tools for Medical Data Analysis
 
-Development: https://gitlab.idiap.ch/biosignal/software/mednet
+Development: https://gitlab.idiap.ch/medai/software/mednet
 
 Documentation: https://mednet.readthedocs.io/
 
