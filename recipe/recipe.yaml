@@ -39,7 +39,8 @@ requirements:
     - matplotlib-base
     - mlflow-skinny
     - numpy
-    - peft
+    - peft  # needs transformers
+    - transformers >=4.36.0  # avoids huggingface-hub conflicts
     - pillow
     - psutil
     - python-gitlab
