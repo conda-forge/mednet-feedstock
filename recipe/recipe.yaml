@@ -1,6 +1,6 @@
 context:
   name: mednet
-  version: 2.0.2
+  version: "2.1.0"
   python_min: 3.11
 
 package:
@@ -8,8 +8,8 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/98/9a/569edc4e67b14710cdef5b53ada6f312ac16fab5953a060c7fa570faf7ec/mednet-${{ version }}.tar.gz
-  sha256: 312b476a012da7bb98c6b22703bc40a0296b3c2aa16db96febf457aad196ff3c
+  url: https://files.pythonhosted.org/packages/fa/7e/c28a6d325d9bb04a20af4db2e7d55e38d8c31826275349b932a7b801ad1b/mednet-${{ version }}.tar.gz
+  sha256: 3e5a71514e4bfebf4855ecfe773b67695bf210747a214966e5b650c9a9ae5e07
 
 build:
   number: 0
