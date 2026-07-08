@@ -1,7 +1,7 @@
 context:
   name: mednet
   version: "2.1.0"
-  python_min: 3.11
+  python_min: "3.11"
 
 package:
   name: ${{ name|lower }}
@@ -32,6 +32,7 @@ requirements:
     - colorlog
     - compact-json
     - credible >=1.0.2
+    - fairret >=0.1.3,<0.2
     - grad-cam >=1.5.0
     - lightning >=2.2.0
     - loky
